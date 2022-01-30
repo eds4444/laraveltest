@@ -14,11 +14,14 @@
     
     @if (Request::is('/'))
         @include('inc.hero')  
-    @endif
-    
+    @endif  
+
     
 
     <div class="conteiner mt-5">
+
+        @include('inc.messages')
+        
         <div class="row">
             <div class="col-8">
                 @yield('content')
