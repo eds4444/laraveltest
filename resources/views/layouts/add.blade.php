@@ -10,7 +10,12 @@
 </head>
 <body>
 
-    @include('inc.header')    
+    @include('inc.header')
+    
+    @if (Request::is('/'))
+        @include('inc.hero')  
+    @endif
+    
     
 
     <div class="conteiner mt-5">
