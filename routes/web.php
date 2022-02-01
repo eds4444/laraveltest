@@ -29,3 +29,11 @@ Route::get('/contact', function () {
 Route::post('/contact/submit', [ ContactController::class, 'submit' ])->name('contact-form');
 
 Route::get('/contact/all', [ ContactController::class, 'allData' ])->name('contact-data');
+
+Route::get('/contact/all/{id}', [ ContactController::class, 'ShowOneMessage' ])->name('contact-data-one');
+
+Route::get('/contact/all/{id}/update', [ ContactController::class, 'updateMessage' ])->name('contact-update');
+
+Route::post('/contact/all/{id}/update', [ ContactController::class, 'updateMessageSubmit' ])->name('contact-update-submit');
+
+Route::get('/contact/all/{id}/delete', [ ContactController::class, 'deleteMessage' ])->name('contact-delete');
